@@ -1,0 +1,22 @@
+allprojects {
+    group 'dev.johanness'
+    version '0.1-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+
+    pluginManager.withPlugin('java') {
+        java {
+            sourceCompatibility = JavaVersion.VERSION_11
+            withSourcesJar()
+        }
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+    tasks.withType(Javadoc) {
+        options.encoding = 'UTF-8'
+    }
+}
