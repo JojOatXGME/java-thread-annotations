@@ -2,11 +2,23 @@ plugins {
     id 'java'
 }
 
+tasks.jar {
+    manifest {
+        attributes('Automatic-Module-Name': 'dev.johanness.thread_annotation_processor')
+    }
+}
+
 dependencies {
     compileOnly 'org.jetbrains:annotations:20.1.0'
     testCompileOnly 'org.jetbrains:annotations:20.1.0'
+
+    implementation project(':annotations')
+    implementation 'com.google.auto:auto-common:0.11'
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.0'
+    testImplementation 'com.google.testing.compile:compile-testing:0.18'
+
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 

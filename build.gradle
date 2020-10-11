@@ -9,6 +9,7 @@ allprojects {
     pluginManager.withPlugin('java') {
         java {
             sourceCompatibility = JavaVersion.VERSION_11
+            modularity.inferModulePath = true
             withSourcesJar()
         }
     }

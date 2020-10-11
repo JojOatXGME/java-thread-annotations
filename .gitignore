@@ -1,12 +1,12 @@
 # Gradle
 /.gradle/
-/build/
+build/
 
 # IntelliJ
 /.idea/*
 !/.idea/codeStyles
 !/.idea/inspectionProfiles
-/out/
+out/
 
 # Vim
 .*.sw[nop]

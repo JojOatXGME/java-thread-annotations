@@ -1,0 +1,14 @@
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass = 'dev.johanness.thread_annotations_example.Main'
+}
+
+dependencies {
+    annotationProcessor project(':processor')
+
+    compileOnly project(':annotations')
+    compileOnly 'org.jetbrains:annotations:20.1.0'
+}

@@ -1,4 +1,5 @@
 rootProject.name = 'java-thread-annotations'
 
 include 'annotations'
+include 'example'
 include 'processor'
